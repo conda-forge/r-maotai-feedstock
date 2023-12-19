@@ -80,6 +80,8 @@ requirements:
     - r-shapes
 
 test:
+  requires:
+    - xorg-libx11                         # [linux]
   commands:
     - $R -e "library('maotai')"           # [not win]
     - "\"%R%\" -e \"library('maotai')\""  # [win]
