@@ -12,7 +12,7 @@ source:
   sha256: 591a17f11d3cdf1f6aa299a3cff41c22a18425ad488e3e7708c098a1bb09b9ab
 
 build:
-  number: 3
+  number: 4
   missing_dso_whitelist:
     - '*/r.dll'  # [win]
     - '*/Rlapack.dll'  # [win]
@@ -26,7 +26,9 @@ requirements:
   build:
     - cross-r-base {{ r_base }}      # [build_platform != target_platform]
     - {{ compiler('c') }}            # [not win]
+    - {{ stdlib("c") }}              # [not win]
     - {{ compiler('m2w64_c') }}      # [win]
+    - {{ stdlib("m2w64_c") }}        # [win]
     - {{ stdlib('c') }}
     - {{ compiler('cxx') }}          # [not win]
     - {{ compiler('m2w64_cxx') }}    # [win]
