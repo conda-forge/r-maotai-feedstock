@@ -1,4 +1,4 @@
-{% set version = '0.2.5' %}
+{% set version = "0.2.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/maotai_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/maotai/maotai_{{ version }}.tar.gz
-  sha256: 591a17f11d3cdf1f6aa299a3cff41c22a18425ad488e3e7708c098a1bb09b9ab
+  sha256: 76ce9bf30dd412d86c2922b94d6e0d68f27973e53ac423e237b08bdc6c2b5667
 
 build:
-  number: 6
+  number: 0
   missing_dso_whitelist:
     - '*/R.dll'        # [win]
     - '*/Rlapack.dll'  # [win]
@@ -101,10 +101,7 @@ test:
 about:
   home: https://github.com/kisungyou/maotai
   license: MIT
-  summary: Matrix is an universal and sometimes primary object/unit in applied mathematics and
-    statistics. We provide a number of algorithms for selected problems in optimization
-    and statistical inference. For general exposition to the topic with focus on statistical
-    context, see the book by Banerjee and Roy (2014, ISBN:9781420095388).
+  summary: Matrix is an universal and sometimes primary object/unit in applied mathematics and statistics. We provide a number of algorithms for selected problems in optimization and statistical inference. For general exposition to the topic with focus on statistical context, see the book by Banerjee and Roy (2014, ISBN:9781420095388).
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
