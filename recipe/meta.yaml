@@ -12,7 +12,7 @@ source:
   sha256: 76ce9bf30dd412d86c2922b94d6e0d68f27973e53ac423e237b08bdc6c2b5667
 
 build:
-  number: 0
+  number: 1
   missing_dso_whitelist:
     - '*/R.dll'        # [win]
     - '*/Rlapack.dll'  # [win]
@@ -46,6 +46,7 @@ requirements:
     - {{ stdlib('c') }}
     - {{ compiler('cxx') }}          # [not win]
     - {{ compiler('m2w64_cxx') }}    # [win]
+    - {{ compiler('fortran') }}      # [osx and arm64]
     - {{ posix }}filesystem          # [win]
     - {{ posix }}make
     - {{ posix }}sed                 # [win]
