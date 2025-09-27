@@ -1,4 +1,4 @@
-{% set version = "0.2.6" %}
+{% set version = "0.2.7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/maotai_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/maotai/maotai_{{ version }}.tar.gz
-  sha256: 76ce9bf30dd412d86c2922b94d6e0d68f27973e53ac423e237b08bdc6c2b5667
+  sha256: 60812e37ea96c07e8181083324c34f06f2131b8b0f2883ed6889f097ab0645dc
 
 build:
-  number: 1
+  number: 0
   missing_dso_whitelist:
     - '*/R.dll'        # [win]
     - '*/Rlapack.dll'  # [win]
