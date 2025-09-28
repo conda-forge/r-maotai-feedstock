@@ -28,6 +28,7 @@ requirements:
     - r-cluster                      # [build_platform != target_platform]
     - r-dbscan                       # [build_platform != target_platform]
     - r-fastcluster                  # [build_platform != target_platform]
+    - r-gsignal                      # [build_platform != target_platform]
     - r-labdsv                       # [build_platform != target_platform]
     - r-matrix                       # [build_platform != target_platform]
     - r-pracma                       # [build_platform != target_platform]
@@ -62,6 +63,7 @@ requirements:
     - r-cluster
     - r-dbscan
     - r-fastcluster
+    - r-gsignal
     - r-labdsv
     - r-matrix
     - r-pracma
@@ -81,6 +83,7 @@ requirements:
     - r-cluster
     - r-dbscan
     - r-fastcluster
+    - r-gsignal
     - r-labdsv
     - r-matrix
     - r-pracma
