@@ -1,4 +1,4 @@
-{% set version = "0.2.7" %}
+{% set version = "0.3.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/maotai_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/maotai/maotai_{{ version }}.tar.gz
-  sha256: 60812e37ea96c07e8181083324c34f06f2131b8b0f2883ed6889f097ab0645dc
+  sha256: 6a753713629ea76cd198b0114bbf37255726d78bb6914e8f6785752c5a28f59c
 
 build:
   number: 0
