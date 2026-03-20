@@ -12,7 +12,7 @@ source:
   sha256: 6a753713629ea76cd198b0114bbf37255726d78bb6914e8f6785752c5a28f59c
 
 build:
-  number: 0
+  number: 1
   missing_dso_whitelist:
     - '*/R.dll'        # [win]
     - '*/Rlapack.dll'  # [win]
@@ -54,8 +54,6 @@ requirements:
     - {{ posix }}coreutils           # [win]
     - {{ posix }}zip                 # [win]
     - xorg-libxfixes                 # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - libgomp                        # [linux]
     - llvm-openmp                    # [osx]
   host:
@@ -78,6 +76,7 @@ requirements:
     - libblas
     - liblapack
     - llvm-openmp                    # [osx]
+    - libgl-devel                    # [linux]
   run:
     - r-base
     - r-cluster
@@ -105,7 +104,8 @@ test:
 about:
   home: https://github.com/kisungyou/maotai
   license: MIT
-  summary: Matrix is an universal and sometimes primary object/unit in applied mathematics and statistics. We provide a number of algorithms for selected problems in optimization and statistical inference. For general exposition to the topic with focus on statistical context, see the book by Banerjee and Roy (2014, ISBN:9781420095388).
+  summary: Matrix is an universal and sometimes primary object/unit in applied mathematics and statistics. We provide a number of algorithms for selected problems in optimization and statistical inference. For general exposition to the topic with focus on statistical context, see the book by Banerjee and Roy (2014, 
+    ISBN:9781420095388).
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
